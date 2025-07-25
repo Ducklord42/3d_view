@@ -1,0 +1,51 @@
+The application 3d.exe needs
+SDL3.dll
+msys-2.0.dll
+in order to work
+
+Run
+cd /c/Users/joahh/Documents/matrix/
+bash make.sh
+in msys2 mingw64
+
+Perspective calculation:
+x
+y
+z
+
+x = (x / (z * Perspective_coefiencient))
+
+float:
+1   0x3f800000
+0   0x00000000
+-1  0xbf800000
+polygon_t: 16bytes per polygon_t
+float
+float
+float
+
+float
+float
+float
+
+float
+float
+float
+
+uint32_t
+
+polygonlist[0] = 3f8000003f8000003f800000bf800000bf8000003f800000bf8000003f8000003f800000ffff0000
+*in big endian
+3f800000
+3f800000
+3f800000
+
+bf800000
+bf800000
+3f800000
+
+bf800000
+3f800000
+3f800000
+
+ffff0000
