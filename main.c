@@ -1,6 +1,6 @@
 //TODO:
 /*
-Make binary STL files work.
+
 */
 
 #include <stdio.h>
@@ -9,7 +9,6 @@ Make binary STL files work.
 #include <math.h>
 #include <time.h>
 #include <SDL3/SDL.h>
-#include <SDL3_ttf/SDL_ttf.h>
 
 #define RENDER_LINES 0x01
 #define FILL_POLYGONS 0x02
@@ -164,16 +163,6 @@ int main(int argc, char** argv)
     else
     {
         SDL_SetWindowIcon(window, icon);
-    }
-
-    //init SDL_ttf
-    TTF_Init();
-
-    //load font
-    TTF_Font *font = TTF_OpenFont("font.ttf", 18);
-    if (!font)
-    {
-        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_WARNING, "Error", "Font couldn't be loaded.", window);
     }
 
     //create screen texture
